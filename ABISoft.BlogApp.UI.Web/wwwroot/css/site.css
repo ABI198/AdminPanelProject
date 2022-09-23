@@ -1,0 +1,14 @@
+﻿
+.image-size-modal {
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 5px;
+    border: 2px solid #d3d3d3;
+}
+
+.image-size-table {
+    max-height: 80px;
+    max-width: 80px;
+    border-radius: 5px;
+    border: 2px solid #d3d3d3;
+}

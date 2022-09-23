@@ -1,0 +1,50 @@
+﻿@model UserUpdateDto
+
+@{ 
+    ViewBag.Title = "Profil Düzenle";
+}
+
+<div class="row">
+    <div class="col-lg-6 offset-lg-3">
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4 class="text-center"><span class="fas fa-edit mr-1"></span>Profil Düzenle</h4>
+            </div>
+            <div class="card-body">
+                <form asp-controller="User" asp-action="ChangeDetails" enctype="multipart/form-data" id="formUserUpdate" method="post">
+                    <div asp-validation-summary="All" class="text-danger" id="validationSummary"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="UserName"></label>
+                        <input class="form-control" asp-for="UserName" placeholder="Lütfen kullanıcı adı giriniz" />
+                        <span class="text-danger" asp-validation-for="UserName"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input type="email" class="form-control" asp-for="Email" placeholder="Lütfen e-posta adresi giriniz" />
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber"></label>
+                        <input class="form-control" asp-for="PhoneNumber" placeholder="Lütfen telefon numarası giriniz" />
+                        <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Picture"></label>
+                        <input type="hidden" asp-for="Picture" value="@Model.Picture"/>
+                        <img class="img-thumbnail img-fluid image-size-modal" src="~/img/@Model.Picture" alt="UserPicture_@Model.UserName" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PictureFile"></label>
+                        <input type="file" accept="image/*" class="form-control-file" asp-for="PictureFile" placeholder="Lütfen resim giriniz" />
+                        <span class="text-danger" asp-validation-for="PictureFile"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"><span class="fas fa-save mr-1"></span>Kaydet</button>
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-danger btn-block"><span class="fas fa-times mr-1"></span>İptal</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
