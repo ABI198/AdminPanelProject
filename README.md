@@ -17,6 +17,7 @@ An admin panel was created for a blog application.
 <b>Design Principles Used</b><br>
  * MVC
  * SOLID Principles
+ * Asynchronous Programming
  * N-Tier Architecture
  * Repository Pattern
  * Unit of Work Pattern
