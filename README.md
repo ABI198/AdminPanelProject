@@ -1,5 +1,5 @@
 # Admin Panel Project 
-An admin panel was created for a blog application.  
+An admin panel was created for a blog application .  
 <br />
 <b>Technologies Used</b>
  * C#
